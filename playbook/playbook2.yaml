@@ -1,0 +1,7 @@
+- hosts:        all
+  gather_facts: False
+  tasks:
+  
+    - shell: apt update
+    
+    - shell: apt install curl
