@@ -1,7 +1,14 @@
 - hosts:        all
   gather_facts: False
   tasks:
-  
-    - shell: apt update
     
-    - shell: apt install curl
+    - name: Actualizar paquete
+      apt:
+        update_cache: yes
+
+    - name: Instalar curl
+      apt:
+        name: curl
+    
+    - name: Curl a google
+      shell: curl google.es
